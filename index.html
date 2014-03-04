@@ -54,30 +54,35 @@
 					</section>
 				</section>
 				
-				
+				<section>
 				<section>		
 					<h2>XML</h2>
 					<p>Lien W3C</p>
                     <a href="http://www.w3schools.com/schema/">http://www.w3schools.com/schema/</a>
 				</section>
+                    <section>
+                        <h2>Enjeux</h2>
+                        <img src="img/programmableweb.jpg">
+                    </section>
+                </section>
+                <section>
+                    <h2>Evaluation</h2>
+                    <p>5 points sur les exercices</p>
+                    <p>5 points sur la collaboration</p>
+                    <p>10 points sur le projet</p>
+                </section>
 				<section>		
 					<h2>Agenda</h2>
-					<ul>
-							<li>Basiques</li>
-							<li>Schéma XML / XSD</li>
-							<li>XML et Java</li>
-							<li>Transformation / XSLT</li>
-							<li>API WEB en XML</li>
-							<li>SOAP</li>
-							<li>Application complète</li>
-					</ul>
+                    <p>1. Exercices de bases : XSD, XLST, DOM, SAX</p>
+                    <p>2. Exercices avancés : exposer du XML et du SOAP</p>
+                    <p>3. Projet</p>
 				</section>
 				<section>
-					<h2>Technologies</h2>
+					<h2>Technologies et outils</h2>
 					<ul>
-						<li>API standard Java XML</li>
+						<li>API standard Java XML : DOM et SAX</li>
 						<li>Spring MVC</li>
-						<li>SOAP</li>
+						<li>SOAP, SOAPUI</li>
 						<li>Cloudbees</li>
 						<li>Android</li>
 					</ul>
@@ -149,20 +154,68 @@
 					<section>
 						<h2>XML et API Java</h2>
 						<ul>
-							<li>Générer XML depuis XSD</li>
 							<li>Valider fichier XML</li>
 							<li>Lire un fichier XML</li>
 							<ul>
 								<li>DOM</li>
 								<li>SAX</li>
-								<li>xquery / xpath</li>
+								<li>XQuery / XPath</li>
 							</ul>
 						</ul>
 					</section>
+                    <section>
+                        <h2>SAX versus DOM</h2>
+                        <table  border="1" cellspacing="0" cellpadding="3"  align="center">
+                            <tbody><tr>
+                                <td width="20%">
+                                    <div align="center">&nbsp;</div>
+                                </td>
+                                <td width="40%">
+                                    <p>les avantages</p>
+                                </td>
+                                <td width="40%">
+                                    <p>les inconvénients</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <p align="center" style="text-align:center;">DOM</p>
+                                </td>
+                                <td width="40%">
+                                    <p>parcours libre de l'arbre</p>
+                                    <p>possibilité de modifier la structure et le contenu de l'arbre</p>
+                                </td>
+                                <td width="40%">
+                                    <p>gourmand en mémoire</p>
+                                    <p>doit traiter tout le document avant d'exploiter les résultats</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <p align="center" style="text-align:center;">SAX</p>
+                                </td>
+                                <td width="40%">
+                                    <p>peu gourmand en ressources mémoire</p>
+                                    <p>rapide</p>
+                                    <p>principes faciles à mettre en oeuvre</p>
+                                    <p>permet de ne traiter que les données utiles</p>
+                                </td>
+                                <td width="40%">
+                                    <p>traite les données séquentiellement</p>
+                                    <p>un peu plus difficile à programmer, il est souvent nécessaire
+                                        de sauvegarder des informations pour les traiter</p>
+                                </td>
+                            </tr>
+                            </tbody></table>
+                        <a href="http://www.jmdoudoux.fr/java/dej/chap-xml.htm">Jean Michel Doudou - Chapitre Xml</a>
+                    </section>
+                    <section>
+                        <h2>xquery et xpath</h2>
+                    </section>
 					<section>
 						<h2>Code time!</h2>
 						<ul>
-							<li>Générer XML depuis XSD</li>
+							<li>Créer XML</li>
 							<li>Valider fichier XML</li>
 							<li>Lire un fichier XML</li>
 							<ul>
@@ -180,16 +233,62 @@
 				<section>
 					<section>
 						<h2>Transformer un fichier XML avec XSLT</h2>
-						<ul>
-							<li>XML ==> HTML</li>
-							<li>XML ==> XML</li>s
-						</ul>
+						<p>XML ==> HTML</p>
+						<p>XML ==> XML</p>
+                        <a href="http://www.jmdoudoux.fr/java/dej/chap-xslt.htm">Jean Michel Doudoux - Chapitre XLST</a>
 					</section>
 					<section>
 						<h2>Code time!</h2>
 						<p>Transformer un fichier CV xml en CV html.</p>
 					</section>
 				</section>
+                <section>
+                    <section>
+                        <h2>Exposer du XML via un serveur Web</h2>
+                        <p>Exposition d'un objet "marshallé" en XML.</p>
+                    </section>
+                    <section>
+                        <h2>Code time!</h2>
+                        <p>Exposer un cv (stocké en object) en xml.</p>
+                        <a href="http://www.mkyong.com/spring-mvc/spring-3-mvc-and-xml-example/">Example</a>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Exposer un service SOAP via un serveur Web</h2>
+                    </section>
+                    <section>
+                        <h2>le contrat : WSDL</h2>
+                    </section>
+                    <section>
+                        <h2>Mode Contract-First</h2>
+                    </section>
+                    <section>
+                        <h2>Mode Code First</h2>
+                    </section>
+                    <section>
+                        <h2>Code time!</h2>
+                        <p>Sanvegarder un CV via un service SOAP.</p>
+                        <a href="http://briansjavablog.blogspot.fr/2013/01/spring-web-services-tutorial.html">Example</a>
+                        <a href="http://www.soapui.org/">Soap UI</a>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Projet</h2>
+                        <p>Exposer des CVs sur une API REST</p>
+                        <p>Les produire et les consommer sur une application Android</p>
+                    </section>
+                    <section>
+                        <img src="img\projet-architecture.png" />
+                    </section>
+                    <section>
+                        <h2>API REST</h2>
+                        <p>/resume PUT</p>
+                        <p>/resume GET</p>
+                        <p>/resume/{id} GET</p>
+                    </section>
+                 </section>
 			</div>
 
 		</div>
