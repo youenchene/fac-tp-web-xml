@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -43,26 +43,47 @@
 					<section>		
 						<h2>Présentation</h2>
 						<p>Youen Chéné</p>
+                        <br/>
+                        <p>Manager-Développeur à Masternaut</p>
+                        <p>Entrepreneur sur Driveo</p>
+                        <p>Activiste au Normandy JUG</p>
 					</section>
 					<section>		
-					<h2>Publicité</h2>
-					<p>JUG</p>
+                        <h2>Publicité</h2>
+                        <img src="img/logo-njug.jpg" style="width: 500px; background: white; padding: 15px;"/>
+                        <p>3ème Mardi de chaque à Seine Innopolis</p>
+                        <p>Le 18 mars à 19h avec lesfurets.com</p>
+                        <a href="http://www.normandyjug.org/">www.normandyjug.org</a>
 					</section>
 					<section>		
 						<h2>Publicité</h2>
-						<p>Codeurs en Seine</p>
+						<img src="img/logo-codeurs-en-seine-big.png" style="background: white; padding: 15px;"/>
+                        <p>Novembre 2014</p>
+                        <a href="http://www.codeursenseine.com/">www.codeursenseine.com</a>
 					</section>
 				</section>
 				
 				<section>
-				<section>		
-					<h2>XML</h2>
-					<p>Lien W3C</p>
-                    <a href="http://www.w3schools.com/schema/">http://www.w3schools.com/schema/</a>
-				</section>
+                    <section>
+                        <h2>XML</h2>
+                        <p>Langage de balisage extensible.</p>
+                        <br/>
+                        <a href="http://www.w3schools.com/xml/">http://www.w3schools.com/xml/</a>
+                    </section>
                     <section>
                         <h2>Enjeux</h2>
                         <img src="img/programmableweb.jpg">
+                        <p>15% des API public.</p>
+                        <p></p>60-70% des APIs dans les directions informatiques.</p>
+                        <p>Utilisé par de nombreux framework java.</p>
+                    </section>
+                    <section>
+                        <h2>Tendance</h2>
+                        <img src="img\xml-json-trends.png" />
+                        <p>XML est remplacé par JSON dans les API.</p>
+                        <p>XML est remplacé par de la configuration annoté ou programmatique dans les framework.</p>
+                        <br/>
+                        <p>Un existant énorme, La connaissance de XML est indispensable.</p>
                     </section>
                 </section>
                 <section>
@@ -73,9 +94,11 @@
                 </section>
 				<section>		
 					<h2>Agenda</h2>
-                    <p>1. Exercices de bases : XSD, XLST, DOM, SAX</p>
-                    <p>2. Exercices avancés : exposer du XML et du SOAP</p>
-                    <p>3. Projet</p>
+                    <ol>
+                    <li>Exercices de bases : XSD, XLST, DOM, SAX</li>
+                    <li>Exercices avancés : exposer du XML et du SOAP</li>
+                    <li>Projet</li>
+                    </ol>
 				</section>
 				<section>
 					<h2>Technologies et outils</h2>
@@ -88,13 +111,6 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Basiques</h2>
-					<ul>
-						<li>Namespace</li>
-						<li>Type de bases</li>
-					</ul>	
-				</section>
-				<section>
 					<section>
 						<h2>Schéma XML</h2>
 						<p>Décrire le format d'un document XMl.</p>
@@ -102,27 +118,74 @@
 							<li>Définition Type de Document : DTD</li>
 							<li>Schéma XML : XSD</li>
 						</ul>
+                        <br/>
+                        <br/>
+                        <a href="http://www.w3schools.com/schema/">http://www.w3schools.com/schema/</a>
 					</section>
+                    <section>
+                        <h2>Namespace</h2>
+                        <img src="img/namespace-xml.png"/>
+                        <p>Dans un fichier XML.</p>
+                    </section>
+                    <section>
+                        <h2>Namespace</h2>
+                        <img src="img/namespace-xsd.png"/>
+                        <p>Dans un fichier XSD.</p>
+                    </section>
+                    <section>
+                        <h2>Les types de bases</h2>
+                        <ul>
+                            <li>xs:string</li>
+                            <li>xs:decimal</li>
+                            <li>xs:integer</li>
+                            <li>xs:boolean</li>
+                            <li>xs:date</li>
+                            <li>xs:time</li>
+                        </ul>
+                    </section>
 					<section>
 						<h2>Sequence versus all</h2>
-						
+						<p>Sequence</p>
+                        <img src="img/sequence.png" />
+                        <p>Ordre obligatoire, répétable possible.</p>
 					</section>
+                    <section>
+                        <h2>Sequence versus all</h2>
+                        <p>All</p>
+                        <img src="img/all.png" />
+                        <p>Ordre non obligatoire, répétable impossible.</p>
+                    </section>
 					<section>
 						<h2>Attributs</h2>
-						
+                        <pre class="xml">&lt;xs:attribute name="xxx" type="yyy"/&gt;</pre>
 					</section>
 					<section>
 						<h2>Contraintes</h2>
-						
+                        <pre class="xml">
+                            &lt;xs:simpleType>
+                                 &lt;xs:restriction base="xs:string"&gt;
+                                        &lt;xs:enumeration value="Audi"/&gt;
+                                        &lt;xs:enumeration value="Golf"/&gt;
+                                        &lt;xs:enumeration value="BMW"/&gt;
+                                 &lt;/xs:restriction&gt;
+                            &lt;/xs:simpleType&gt;
+                            </pre>
 					</section>
 					<section>
 						<h2>Types Complexes</h2>
-						
+						<pre class="xml">
+                            &lt;xs:complexType>
+                                &lt;xs:sequence>
+                                    &lt;xs:element name="name" type="xs:string"/&gt;
+                                    &lt;xs:element name="level" type="xs:integer"/&gt;
+                                &lt;/xs:sequence&gt;
+                            &lt;/xs:complexType&gt;
+                            </pre>
 					</section>
 					<section>
 						<h2>Code time!</h2>
 						<p>Construire le XSD d'un CV.</p>
-						<ul>
+						<ul style="font-size: 70%; line-height: 0.9em;">
 								<li>Nom, Prénom</li>
 								<li>Objectif</li>
 								<li>Expérience Professionelles</li>
@@ -165,42 +228,42 @@
 					</section>
                     <section>
                         <h2>SAX versus DOM</h2>
-                        <table  border="1" cellspacing="0" cellpadding="3"  align="center">
+                        <table style="border: 2px solid white;" cellspacing="0" cellpadding="3"  align="center">
                             <tbody><tr>
-                                <td width="20%">
+                                <td width="20%" style="border: 2px solid white;  color: white;">
                                     <div align="center">&nbsp;</div>
                                 </td>
-                                <td width="40%">
+                                <td width="40%" style="border: 2px solid white; color: white;">
                                     <p>les avantages</p>
                                 </td>
-                                <td width="40%">
+                                <td width="40%" style="border: 2px solid white;  color: white;">
                                     <p>les inconvénients</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td width="20%">
+                            <tr style="font-size: 80%;">
+                                <td width="20%" style="border: 2px solid white;">
                                     <p align="center" style="text-align:center;">DOM</p>
                                 </td>
-                                <td width="40%">
+                                <td width="40%" style="border: 2px solid white;">
                                     <p>parcours libre de l'arbre</p>
                                     <p>possibilité de modifier la structure et le contenu de l'arbre</p>
                                 </td>
-                                <td width="40%">
+                                <td width="40%" style="border: 2px solid white;">
                                     <p>gourmand en mémoire</p>
                                     <p>doit traiter tout le document avant d'exploiter les résultats</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td width="20%">
+                            <tr style="font-size: 80%;">
+                                <td width="20%" style="border: 2px solid white;">
                                     <p align="center" style="text-align:center;">SAX</p>
                                 </td>
-                                <td width="40%">
+                                <td width="40%" style="border: 2px solid white;">
                                     <p>peu gourmand en ressources mémoire</p>
                                     <p>rapide</p>
                                     <p>principes faciles à mettre en oeuvre</p>
                                     <p>permet de ne traiter que les données utiles</p>
                                 </td>
-                                <td width="40%">
+                                <td width="40%" style="border: 2px solid white;">
                                     <p>traite les données séquentiellement</p>
                                     <p>un peu plus difficile à programmer, il est souvent nécessaire
                                         de sauvegarder des informations pour les traiter</p>
@@ -208,9 +271,6 @@
                             </tr>
                             </tbody></table>
                         <a href="http://www.jmdoudoux.fr/java/dej/chap-xml.htm">Jean Michel Doudou - Chapitre Xml</a>
-                    </section>
-                    <section>
-                        <h2>xquery et xpath</h2>
                     </section>
 					<section>
 						<h2>Code time!</h2>
@@ -233,10 +293,12 @@
 				<section>
 					<section>
 						<h2>Transformer un fichier XML avec XSLT</h2>
-						<p>XML ==> HTML</p>
-						<p>XML ==> XML</p>
+						<p>XML vers HTML</p>
+						<p>XML vers XML</p>
+                        <br/>
                         <a href="http://www.jmdoudoux.fr/java/dej/chap-xslt.htm">Jean Michel Doudoux - Chapitre XLST</a>
-					    <a href="http://www.w3schools.com/xsl/default.asp">W3 School</a>
+                        <br/>
+					    <a href="http://www.w3schools.com/xsl/">http://www.w3schools.com/xsl/</a>
                     </section>
 					<section>
 						<h2>Code time!</h2>
